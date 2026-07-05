@@ -2,22 +2,24 @@ import { useContext } from "react";
 import { WalletContext } from "../context/WalletContext";
 import { XPContext } from "../context/XPContext";
 import { connectWallet } from "../services/wallet";
+import { QuestContext } from "../context/QuestContext";
 
 function ConnectWallet() {
   const { wallet, setWallet } = useContext(WalletContext);
   const { setXp, setPoints } = useContext(XPContext);
+  const { completeQuest } = useContext(QuestContext);
 
   async function handleConnect() {
     const data = await connectWallet();
 
-    if (data) {
-      console.log(data);
+   if (data) {
+  setWallet(data);
 
-      setWallet(data);
+  setXp(100);
+  setPoints(50);
 
-      // Reward for connecting wallet
-      setXp(100);
-      setPoints(50);
+  completeQuest(1);
+}
     }
   }
 
