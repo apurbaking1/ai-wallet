@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { WalletContext } from "../context/WalletContext";
 import { connectWallet } from "../services/wallet";
 
 function ConnectWallet() {
-  const [wallet, setWallet] = useState(null);
+  const { wallet, setWallet } = useContext(WalletContext);
 
   async function handleConnect() {
     const data = await connectWallet();
@@ -14,23 +15,19 @@ function ConnectWallet() {
 
   return (
     <div className="balance-card">
-      <button className="action-btn ai" onClick={handleConnect}>
-        🦊 Connect Wallet
-      </button>
-
-      {wallet && (
+      {!wallet ? (
+        <button className="action-btn ai" onClick={handleConnect}>
+          🦊 Connect Wallet
+        </button>
+      ) : (
         <>
-          <p style={{ marginTop: "20px", wordBreak: "break-all" }}>
-            <strong>Address:</strong>
-            <br />
+          <h3>✅ Wallet Connected</h3>
+
+          <p style={{ wordBreak: "break-all" }}>
             {wallet.address}
           </p>
 
-          <p style={{ marginTop: "15px" }}>
-            <strong>Balance:</strong>
-            <br />
-            {Number(wallet.balance).toFixed(4)} ETH
-          </p>
+          <h2>{Number(wallet.balance).toFixed(4)} ETH</h2>
         </>
       )}
     </div>
