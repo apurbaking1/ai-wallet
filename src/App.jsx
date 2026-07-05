@@ -1,22 +1,12 @@
-import './App.css'
-
+import BalanceCard from "./components/BalanceCard";
+import Header from "./components/Header";
+import "./App.css";
 function App() {
   return (
     <div className="app">
-      <header className="header">
-        <div className="logo">◆</div>
-        <h1 className="title">AI Wallet</h1>
-        <p className="subtitle">Manage crypto with natural language</p>
-      </header>
+      <Header />
 
-      <div className="balance-card">
-        <span className="balance-label">Total Balance</span>
-        <div className="balance-amount">
-          <span className="amount">0.00</span>
-          <span className="currency">ETH</span>
-        </div>
-        <span className="balance-usd">≈ $0.00 USD</span>
-      </div>
+      <BalanceCard />
 
       <div className="actions">
         <button type="button" className="action-btn send">
