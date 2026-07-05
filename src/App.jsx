@@ -1,6 +1,12 @@
-import BalanceCard from "./components/BalanceCard";
-import Header from "./components/Header";
 import "./App.css";
+
+import Header from "./components/Header";
+import BalanceCard from "./components/BalanceCard";
+import ActionButtons from "./components/ActionButtons";
+import AIChat from "./components/AIChat";
+import Portfolio from "./components/Portfolio";
+import RecentActivity from "./components/RecentActivity";
+
 function App() {
   return (
     <div className="app">
@@ -8,22 +14,14 @@ function App() {
 
       <BalanceCard />
 
-      <div className="actions">
-        <button type="button" className="action-btn send">
-          <span className="btn-icon">↑</span>
-          Send
-        </button>
-        <button type="button" className="action-btn receive">
-          <span className="btn-icon">↓</span>
-          Receive
-        </button>
-        <button type="button" className="action-btn ai">
-          <span className="btn-icon">✦</span>
-          AI Assistant
-        </button>
-      </div>
+      <ActionButtons />
+
+      <AIChat />
+
+      <Portfolio />
+<RecentActivity />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
