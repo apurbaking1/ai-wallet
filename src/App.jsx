@@ -1,35 +1,35 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import BalanceCard from "./components/BalanceCard";
-import ActionButtons from "./components/ActionButtons";
-import AIChat from "./components/AIChat";
-import Portfolio from "./components/Portfolio";
-import TokenList from "./components/TokenList";
-import RecentActivity from "./components/RecentActivity";
-import ConnectWallet from "./components/ConnectWallet";
 import Navbar from "./components/Navbar";
-import QuestProgress from "./components/QuestProgress";
+
+import Dashboard from "./pages/Dashboard";
+import Send from "./pages/Send";
+import Receive from "./pages/Receive";
+import Swap from "./pages/Swap";
+import AI from "./pages/AI";
+import Quests from "./pages/Quests";
+import Referral from "./pages/Referral";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Header />
+    <BrowserRouter>
+      <div className="app">
+        <Navbar />
 
-      <BalanceCard />
-
-      <ActionButtons />
-
-      <AIChat />
-
-      <Portfolio />
-      <TokenList />
-      <QuestProgress />
-
-<RecentActivity />
-<ConnectWallet />
-    </div>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/send" element={<Send />} />
+          <Route path="/receive" element={<Receive />} />
+          <Route path="/swap" element={<Swap />} />
+          <Route path="/ai" element={<AI />} />
+          <Route path="/quests" element={<Quests />} />
+          <Route path="/referral" element={<Referral />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
