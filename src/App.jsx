@@ -6,6 +6,7 @@ import ActionButtons from "./components/ActionButtons";
 import AIChat from "./components/AIChat";
 import Portfolio from "./components/Portfolio";
 import RecentActivity from "./components/RecentActivity";
+import ConnectWallet from "./components/ConnectWallet";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
       <Portfolio />
 <RecentActivity />
+<ConnectWallet />
     </div>
   );
 }
