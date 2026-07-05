@@ -9,6 +9,7 @@ function ConnectWallet() {
     const data = await connectWallet();
 
     if (data) {
+      console.log(data); // 👈 এই line টা যোগ করো
       setWallet(data);
     }
   }

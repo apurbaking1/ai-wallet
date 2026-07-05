@@ -1,13 +1,13 @@
 function TokenList() {
   const tokens = [
-    { name: "Ethereum", symbol: "ETH", balance: "2.45", price: "$6,120" },
-    { name: "Bitcoin", symbol: "BTC", balance: "0.18", price: "$19,800" },
-    { name: "USD Coin", symbol: "USDC", balance: "5000", price: "$5,000" },
+    { name: "Ethereum", symbol: "ETH", balance: "0.0000" },
+    { name: "USD Coin", symbol: "USDC", balance: "0.00" },
+    { name: "Tether", symbol: "USDT", balance: "0.00" },
   ];
 
   return (
     <div className="balance-card">
-      <h2>🪙 My Assets</h2>
+      <h2>💼 Assets</h2>
 
       {tokens.map((token) => (
         <div
@@ -16,6 +16,8 @@ function TokenList() {
             display: "flex",
             justifyContent: "space-between",
             marginTop: "15px",
+            padding: "10px 0",
+            borderBottom: "1px solid rgba(255,255,255,0.08)",
           }}
         >
           <div>
@@ -24,11 +26,7 @@ function TokenList() {
             <small>{token.name}</small>
           </div>
 
-          <div style={{ textAlign: "right" }}>
-            <strong>{token.balance}</strong>
-            <br />
-            <small>{token.price}</small>
-          </div>
+          <div>{token.balance}</div>
         </div>
       ))}
     </div>

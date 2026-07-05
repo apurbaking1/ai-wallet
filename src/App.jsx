@@ -9,7 +9,7 @@ import TokenList from "./components/TokenList";
 import RecentActivity from "./components/RecentActivity";
 import ConnectWallet from "./components/ConnectWallet";
 import Navbar from "./components/Navbar";
-
+import QuestProgress from "./components/QuestProgress";
 
 function App() {
   return (
@@ -25,6 +25,8 @@ function App() {
 
       <Portfolio />
       <TokenList />
+      <QuestProgress />
+
 <RecentActivity />
 <ConnectWallet />
     </div>
