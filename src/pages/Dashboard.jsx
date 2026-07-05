@@ -7,12 +7,15 @@ import TokenList from "../components/TokenList";
 import QuestProgress from "../components/QuestProgress";
 import RecentActivity from "../components/RecentActivity";
 import ConnectWallet from "../components/ConnectWallet";
-
+import StatsCard from "../components/StatsCard";
+import ProgressCard from "../components/ProgressCard";
 function Dashboard() {
   return (
     <>
       <Header />
       <BalanceCard />
+      <StatsCard />
+      <ProgressCard />
       <ActionButtons />
       <AIChat />
       <Portfolio />
