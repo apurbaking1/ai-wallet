@@ -5,8 +5,10 @@ import BalanceCard from "./components/BalanceCard";
 import ActionButtons from "./components/ActionButtons";
 import AIChat from "./components/AIChat";
 import Portfolio from "./components/Portfolio";
+import TokenList from "./components/TokenList";
 import RecentActivity from "./components/RecentActivity";
 import ConnectWallet from "./components/ConnectWallet";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <AIChat />
 
       <Portfolio />
+      <TokenList />
 <RecentActivity />
 <ConnectWallet />
     </div>

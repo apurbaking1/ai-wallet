@@ -1,4 +1,4 @@
-import { BrowserProvider } from "ethers";
+import { BrowserProvider, formatEther } from "ethers";
 
 export async function connectWallet() {
   if (!window.ethereum) {
@@ -14,5 +14,10 @@ export async function connectWallet() {
 
   const address = await signer.getAddress();
 
-  return address;
+  const balance = await provider.getBalance(address);
+
+  return {
+    address,
+    balance: formatEther(balance),
+  };
 }
