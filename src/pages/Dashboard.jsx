@@ -1,0 +1,25 @@
+import Header from "../components/Header";
+import BalanceCard from "../components/BalanceCard";
+import ActionButtons from "../components/ActionButtons";
+import AIChat from "../components/AIChat";
+import Portfolio from "../components/Portfolio";
+import TokenList from "../components/TokenList";
+import RecentActivity from "../components/RecentActivity";
+import ConnectWallet from "../components/ConnectWallet";
+
+function Dashboard() {
+  return (
+    <div className="app">
+      <Header />
+      <BalanceCard />
+      <ActionButtons />
+      <AIChat />
+      <Portfolio />
+      <TokenList />
+      <RecentActivity />
+      <ConnectWallet />
+    </div>
+  );
+}
+
+export default Dashboard;

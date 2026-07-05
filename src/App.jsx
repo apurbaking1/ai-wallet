@@ -8,11 +8,13 @@ import Portfolio from "./components/Portfolio";
 import TokenList from "./components/TokenList";
 import RecentActivity from "./components/RecentActivity";
 import ConnectWallet from "./components/ConnectWallet";
+import Navbar from "./components/Navbar";
 
 
 function App() {
   return (
     <div className="app">
+      <Navbar />
       <Header />
 
       <BalanceCard />
