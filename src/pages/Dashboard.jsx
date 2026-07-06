@@ -9,13 +9,19 @@ import RecentActivity from "../components/RecentActivity";
 import ConnectWallet from "../components/ConnectWallet";
 import StatsCard from "../components/StatsCard";
 import ProgressCard from "../components/ProgressCard";
+import DailyCheckIn from "../components/DailyCheckIn";
+
 function Dashboard() {
   return (
     <>
       <Header />
+    
       <BalanceCard />
       <StatsCard />
       <ProgressCard />
+
+      <DailyCheckIn />
+
       <ActionButtons />
       <AIChat />
       <Portfolio />

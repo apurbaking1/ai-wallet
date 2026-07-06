@@ -8,6 +8,7 @@ import { XPProvider } from "./context/XPContext";
 import { QuestProvider } from "./context/QuestContext";
 import { ReferralProvider } from "./context/ReferralContext";
 import { RewardProvider } from "./context/RewardContext";
+import { DailyProvider } from "./context/DailyContext";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
    <WalletProvider>
@@ -15,7 +16,9 @@ createRoot(document.getElementById("root")).render(
     <RewardProvider>
       <QuestProvider>
         <ReferralProvider>
-          <App />
+          <DailyProvider>
+            <App />
+          </DailyProvider>
         </ReferralProvider>
       </QuestProvider>
     </RewardProvider>
